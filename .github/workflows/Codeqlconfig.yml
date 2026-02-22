@@ -1,0 +1,20 @@
+name: "Nova — CodeQL config"
+
+  disable-default-queries: false
+
+queries:
+  - uses: security-and-quality
+  - uses: security-extended
+
+query-filters:
+  - exclude:
+      tags contain: "experimental"
+
+paths:
+  - chatbot.py
+
+paths-ignore:
+  - "**/*.md"
+  - "**/*.yml"
+  - "**/*.yaml"
+  - ".github/**"
